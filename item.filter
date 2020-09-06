@@ -2245,5 +2245,5 @@ ItemDisplay[CL5 (SK251>0 OR SK252>0 OR SK253>0 OR SK254>0 OR SK255>0 OR SK256>0 
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║                                     ▬▬▬▬▬ Catch-All ▬▬▬▬▬                                     ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-ItemDisplay[NMAG]: //Hide all namg
-ItemDisplay[]: %RED%###%WHITE%###%BLUE%### %TAN%Stone of Jordan %BLUE%###%WHITE%###%RED%###
+ItemDisplay[NMAG]: //Hide all NMAG
+ItemDisplay[]: 
