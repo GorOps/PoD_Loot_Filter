@@ -2032,6 +2032,7 @@ ItemDisplay[!ETH pab RES>39 ILVL>25 SOCK=0]: %NAME% %BLUE%[%WHITE%0%YELLOW%»4%B
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // 3 Sockets
 //─────────────────────────────────────────────────────────────────────────────────────────────────
+ItemDisplay[ETH SOCK=3 72h]: %NAME% %BLUE%[%GREEN%3%BLUE%]%WHITE%
 ItemDisplay[ETH SOCK=3 (uui OR uea OR ula OR utu) DEF>674]: %NAME% %BLUE%[%GREEN%3%BLUE%]%WHITE%
 ItemDisplay[ETH SOCK=3 (ung OR urs OR uhn) DEF>711]: %NAME% %BLUE%[%GREEN%3%BLUE%]%WHITE%
 ItemDisplay[ETH SOCK=3 (upl OR utp OR uld) DEF>749]: %NAME% %BLUE%[%GREEN%3%BLUE%]%WHITE%
