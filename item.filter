@@ -113,22 +113,22 @@ ItemDisplay[cx7]: %NAME% //Key of Chaos
 ItemDisplay[maz]: %NAME% //Infernal Trial
 
 // Relics
-ItemDisplay[ma1]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Icy Cavern or Pleasant Pastures
-ItemDisplay[ma2]: %RED%#%WHITE%#%BLUE%# %PURPLE%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Forgotten Desert
-ItemDisplay[ma3]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Not Sure
-ItemDisplay[ma4]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Desecrated Temple
-ItemDisplay[ma5]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Frigid Plateau
-ItemDisplay[ma6]: %RED%#%WHITE%#%BLUE%# %PURPLE%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Ruined Citadel
-ItemDisplay[ma7]: %RED%#%WHITE%#%BLUE%# %PURPLE%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Burnt Forest
-ItemDisplay[ma8]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Musty Crypt
-ItemDisplay[ma9]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% %BLUE%#%WHITE%#%RED%# %CODE% //Dim Cellar
+ItemDisplay[ma1 !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## //Icy Cavern or Pleasant Pastures
+ItemDisplay[ma2 !ID]: %RED%#### %TAN%%NAME% T4 %RED%#### //Forgotten Desert
+ItemDisplay[ma3 !ID]: %NAME% %CODE% //Not Sure
+ItemDisplay[ma4 !ID]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% T2 %BLUE%#%WHITE%#%RED%# //Desecrated Temple
+ItemDisplay[ma5 !ID]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% T1 %BLUE%#%WHITE%#%RED%# //Frigid Plateau
+ItemDisplay[ma6 !ID]: %RED%#### %TAN%%NAME% T3 %RED%####  //Ruined Citadel
+ItemDisplay[ma7 !ID]: %RED%#### %TAN%%NAME% T5 %RED%####  //Burnt Forest
+ItemDisplay[ma8 !ID]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% T2 %BLUE%#%WHITE%#%RED%# //Musty Crypt
+ItemDisplay[ma9 !ID]: %RED%#%WHITE%#%BLUE%# %TAN%%NAME% T2 %BLUE%#%WHITE%#%RED%# //Dim Cellar
 
 //║                             ▬▬▬▬▬ Catch-All for Misc Items ▬▬▬▬▬                              ║
-ItemDisplay[!(WEAPON OR ARMOR OR aq2 OR cq2 OR cm1 OR cm2 OR cm3 OR rin OR amu OR jew)]: %NAME%[%CODE%]
+ItemDisplay[!(WEAPON OR ARMOR OR aq2 OR cq2 OR cm1 OR cm2 OR cm3 OR rin OR amu OR jew)]: %NAME%
 
 //║█║                             Equipment and Magic Item Handling                             ║█║
-ItemDisplay[RW !ETH]: %WHITE%%NAME%%WHITE%[%GRAY%Lv.%ILVL%%WHITE%]
-ItemDisplay[RW ETH]: %GRAY%E.%NAME%%WHITE%[%GRAY%Lv.%ILVL%%WHITE%]
+ItemDisplay[RW !ETH]: %WHITE%%NAME% %WHITE%[%GRAY%Lv.%ILVL%%WHITE%]
+ItemDisplay[RW ETH]: %GRAY%E.%NAME% %WHITE%[%GRAY%Lv.%ILVL%%WHITE%]
 
 //║                   ▬▬▬▬▬ [Optional] Rules for Ignoring Specific Items ▬▬▬▬▬                    ║
 ItemDisplay[MAG !ID cm2]: //Ignore unidentified magic large charms.
@@ -136,7 +136,7 @@ ItemDisplay[MAG !ID rin CLVL>69]: //Ignore unidentified magic rings at level 70+
 ItemDisplay[MAG !ID jew ILVL<66]: //Ignore unidentified magic jewels unless they have an item level high enough for ED +40%.
 ItemDisplay[MAG !ID jew ILVL<58]: //Ignore unidentified magic jewels unless they have an item level high enough for Max Damage +30.
 
-ItemDisplay[MAG !ID (cm1 OR cm3 OR jew)]: %GREEN%#### %WHITE%%NAME% %GREEN%#### //Magical Unid SC/GC
+ItemDisplay[MAG !ID (cm1 OR cm3 OR jew)]: %GREEN%#### %BLUE%%NAME% %GREEN%#### //Magical Unid SC/GC
 ItemDisplay[RARE !ID (jew OR rin OR amu)]: %GREEN%#### %YELLOW%%NAME% %GREEN%#### //Rare Jewel, Ring, Ammy
 
 //║              ▬▬▬▬▬ [Optional] Rules for Ignoring Specific Equipment Types ▬▬▬▬▬               ║
@@ -161,7 +161,7 @@ ItemDisplay[(NMAG OR (RARE AND !ID)) (gix OR 9gi OR 7gi)]: //Ignore Giant Axe, A
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 ItemDisplay[(NMAG OR (RARE AND !ID)) (mac OR 9ma OR 7ma)]: //Ignore Mace, Flanged Mace, and Reinforced Mace
 ItemDisplay[(NMAG OR (RARE AND !ID)) (mst OR 9mt OR 7mt)]: //Ignore Morning Star, Jagged Star, and Devil Star
-ItemDisplay[(NMAG OR (RARE AND !ID)) (fla OR 9fl OR 7fl)]: //Ignore Flail, Knout, and Scourge
+ItemDisplay[(NMAG OR (RARE AND !ID)) (9fl OR 7fl)]: //Ignore Knout, and Scourge
 ItemDisplay[(NMAG OR (RARE AND !ID)) (whm OR 9wh OR 7wh)]: //Ignore War Hammer, Battle Hammer, and Legendary Mallet
 ItemDisplay[(NMAG OR (RARE AND !ID)) (mau OR 9m9 OR 7m7)]: //Ignore Maul, War Club, and Ogre Maul
 ItemDisplay[(NMAG OR (RARE AND !ID)) (gma OR 9gm)]: //Ignore Great Maul, Martel de Fer
@@ -229,11 +229,11 @@ ItemDisplay[(NMAG OR (RARE AND !ID)) WP10]:
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Staves - Ignore all Staves except Archon Staves
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (sst OR 8ss OR 6ss)]: //Ignore Short Staff, Jo Staff, and Walking Stick
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (lst OR 8ls OR 6ls)]: //Ignore Long Staff, Quarterstaff, and Stalagmite
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (cst OR 8cs OR 6cs)]: //Ignore Gnarled Staff, Cedar Staff, and Elder Staff
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (bst OR 8bs OR 6bs)]: //Ignore Battle Staff, Gothic Staff, and Shillelagh
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wst OR 8ws)]: //Ignore War Staff, Rune Staff
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (sst OR 8ss OR 6ss)]: //Ignore Short Staff, Jo Staff, and Walking Stick
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (lst OR 8ls OR 6ls)]: //Ignore Long Staff, Quarterstaff, and Stalagmite
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (cst OR 8cs OR 6cs)]: //Ignore Gnarled Staff, Cedar Staff, and Elder Staff
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (bst OR 8bs OR 6bs)]: //Ignore Battle Staff, Gothic Staff, and Shillelagh
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wst OR 8ws)]: //Ignore War Staff, Rune Staff
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Wands - Ignore All Wands That Can Not Have 2 Sockets
 //─────────────────────────────────────────────────────────────────────────────────────────────────
@@ -241,10 +241,7 @@ ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wnd OR ywn OR 9wn)]:
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Scepters
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) WP13]: //Ignore All Scepters
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (scp OR 9sc OR 7sc)]: //Ignore Scepter, Rune Scepter, and Mighty Scepter
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (gsc OR 9qs OR 7qs)]: //Ignore Grand Scepter, Holy Water Sprinkler, and Seraph Rod
-//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wsp OR 9ws OR 7ws)]: //Ignore War Scepter, Divine Scepter, and Caduceus
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) WP13]: //Ignore All Scepters
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Amazon Bows - Ignore All Amazon Bows Except Grand Matron Bow
 //─────────────────────────────────────────────────────────────────────────────────────────────────
@@ -276,44 +273,44 @@ ItemDisplay[(MAG OR RARE) !ID cq2]: //Ignore Bolts
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Shields - Ignore all Shield except Monarch (uit)
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[(NMAG OR (RARE AND !ID)) (buc OR xuc OR uuc)]: //Ignore Buckler, Defender, and Heater [Light]
-ItemDisplay[(NMAG OR (RARE AND !ID)) (sml OR xml OR uml)]: //Ignore Small Shield, Round Shield, and Luna [Light]
-ItemDisplay[(NMAG OR (RARE AND !ID)) (spk OR xpk OR upk)]: //Ignore Spiked Shield, Barbed Shield, and Blade Barrier [Light]
-ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (kit OR xit)]: //Ignore Kite Shield, Dragon Shield, and Monarch [Light]
-ItemDisplay[(NMAG OR (RARE AND !ID)) (bsh OR xsh OR ush)]: //Ignore Bone Shield, Grim Shield, and Troll Nest [Light]
-ItemDisplay[(NMAG OR (RARE AND !ID)) (lrg OR xrg OR urg)]: //Ignore Large Shield, Scutum, and Hyperion [Medium]
-ItemDisplay[(NMAG OR (RARE AND !ID)) (gts OR xts OR uts)]: //Ignore Gothic Shield, Ancient Shield, and Ward [Medium]
-ItemDisplay[(NMAG OR (RARE AND !ID)) (tow OR xow OR uow)]: //Ignore Tower Shield, Pavise, and Aegis [Heavy]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (buc OR xuc OR uuc)]: //Ignore Buckler, Defender, and Heater [Light]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (sml OR xml OR uml)]: //Ignore Small Shield, Round Shield, and Luna [Light]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (spk OR xpk OR upk)]: //Ignore Spiked Shield, Barbed Shield, and Blade Barrier [Light]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (kit OR xit)]: //Ignore Kite Shield, Dragon Shield
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (bsh OR xsh OR ush)]: //Ignore Bone Shield, Grim Shield, and Troll Nest [Light]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (lrg OR xrg OR urg)]: //Ignore Large Shield, Scutum, and Hyperion [Medium]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (gts OR xts OR uts)]: //Ignore Gothic Shield, Ancient Shield, and Ward [Medium]
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (tow OR xow OR uow)]: //Ignore Tower Shield, Pavise, and Aegis [Heavy]
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Body Armor - Ignore All except Mage Plate and Elite Armors
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-//ItemDisplay[(NMAG OR (RARE AND !ID)) EQ2]: //Ignore All Body Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (qui OR xui)]: //Ignore Quilted Armor, Ghost Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (lea OR xea)]: //Ignore Leather Armor, Serpentskin
-ItemDisplay[(NMAG OR (RARE AND !ID)) (hla OR xla)]: //Ignore Hard Leather Armor, Demonhide Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (stu OR xtu)]: //Ignore Studded Leather, Trellised Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (brs OR xrs)]: //Ignore Breast Plate, Cuirass
-ItemDisplay[(NMAG OR (RARE AND !ID)) ltp]: //Ignore Light Plate
-ItemDisplay[(NMAG OR (RARE AND !ID)) (rng OR xng)]: //Ignore Ring Mail, Linked Mail
-ItemDisplay[(NMAG OR (RARE AND !ID)) (chn OR xhn)]: //Ignore Chain Mail, Mesh Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (spl OR xpl)]: //Ignore Splint Mail, Russet Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (fld OR xld)]: //Ignore Field Plate, Sharktooth
-ItemDisplay[(NMAG OR (RARE AND !ID)) (gth OR xth)]: //Ignore Gothic Plate, Embossed Plate
-ItemDisplay[(NMAG OR (RARE AND !ID)) (aar OR xar)]: //Ignore Ancient Armor, Ornate Armor
-ItemDisplay[(NMAG OR (RARE AND !ID)) (scl OR xcl)]: //Ignore Scale Mail, Tigulated Mail
-ItemDisplay[(NMAG OR (RARE AND !ID)) (plt OR xlt)]: //Ignore Plate Mail, Templar Coat
-ItemDisplay[(NMAG OR (RARE AND !ID)) (ful OR xul)]: //Ignore Full Plate, Chaos Armor
+//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) EQ2]: //Ignore All Body Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (qui OR xui)]: //Ignore Quilted Armor, Ghost Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (lea OR xea)]: //Ignore Leather Armor, Serpentskin
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (hla OR xla)]: //Ignore Hard Leather Armor, Demonhide Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (stu OR xtu)]: //Ignore Studded Leather, Trellised Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (brs OR xrs)]: //Ignore Breast Plate, Cuirass
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) ltp]: //Ignore Light Plate
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (rng OR xng)]: //Ignore Ring Mail, Linked Mail
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (chn OR xhn)]: //Ignore Chain Mail, Mesh Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (spl OR xpl)]: //Ignore Splint Mail, Russet Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (fld OR xld)]: //Ignore Field Plate, Sharktooth
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (gth OR xth)]: //Ignore Gothic Plate, Embossed Plate
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (aar OR xar)]: //Ignore Ancient Armor, Ornate Armor
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (scl OR xcl)]: //Ignore Scale Mail, Tigulated Mail
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (plt OR xlt)]: //Ignore Plate Mail, Templar Coat
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (ful OR xul)]: //Ignore Full Plate, Chaos Armor
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Helms - Ignore All Helms, Barbarian Helms, and Druid Pelts but not Circlets
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[(NMAG OR (RARE AND !ID)) (cap OR xap OR uap)]: //Ignore Cap, War Hat, and Shako
-ItemDisplay[(NMAG OR (RARE AND !ID)) (skp OR xkp OR ukp)]: //Ignore Skull Cap, Sallet, and Hydraskull
-ItemDisplay[(NMAG OR (RARE AND !ID)) (hlm OR xlm OR ulm)]: //Ignore Helm, Casque, and Armet
-ItemDisplay[(NMAG OR (RARE AND !ID)) (fhl OR xhl OR uhl)]: //Ignore Full Helm, Basinet, and Giant Conch
-ItemDisplay[(NMAG OR (RARE AND !ID)) (ghm OR xhm OR uhm)]: //Ignore Great Helm, Winged Helm, and Spired Helm
-ItemDisplay[(NMAG OR (RARE AND !ID)) (crn OR xrn OR urn)]: //Ignore Crown, Grand Crown, and Corona
-ItemDisplay[(NMAG OR (RARE AND !ID)) (msk OR xsk OR usk)]: //Ignore Mask, Death Mask, and Demonhead
-ItemDisplay[(NMAG OR (RARE AND !ID)) (bhm OR xh9 OR uh9)]: //Ignore Bone Helm, Grim Helm, and Bone Visage
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (cap OR xap OR uap)]: //Ignore Cap, War Hat, and Shako
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (skp OR xkp OR ukp)]: //Ignore Skull Cap, Sallet, and Hydraskull
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (hlm OR xlm OR ulm)]: //Ignore Helm, Casque, and Armet
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (fhl OR xhl OR uhl)]: //Ignore Full Helm, Basinet, and Giant Conch
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (ghm OR xhm OR uhm)]: //Ignore Great Helm, Winged Helm, and Spired Helm
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (crn OR xrn OR urn)]: //Ignore Crown, Grand Crown, and Corona
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (msk OR xsk OR usk)]: //Ignore Mask, Death Mask, and Demonhead
+ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (bhm OR xh9 OR uh9)]: //Ignore Bone Helm, Grim Helm, and Bone Visage
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Circlets - Dont Ignore Any
 //─────────────────────────────────────────────────────────────────────────────────────────────────
@@ -531,11 +528,12 @@ ItemDisplay[NMAG !ELT !ETH !SUP EQ3 SOCK=0 CLVL>5]: //Shields (Does Not Include 
 // Ignore any non-magical non-ethereal elite body armor that isn't superior if their defense is not
 // on the higher end.
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[NMAG !ETH !SUP DEF<450 (uui OR uea OR ula OR utu)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]//Dusk Shroud, Wyrmhide, Scarab Husk, and Wire Fleece
-ItemDisplay[NMAG !ETH !SUP DEF<475 (ung OR ucl OR urs OR uhn)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]//Diamond Mail, Loricated Mail, Great Hauberk, and Boneweave
-ItemDisplay[NMAG !ETH !SUP DEF<500 (upl OR utp OR uld OR ult)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]//Balrog Skin, Archon Plate, Kraken Shell, and Hellforge Plate
-ItemDisplay[NMAG !ETH !SUP DEF<525 (uth OR uul)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]//Lacquered Plate and Shadow Plate
-ItemDisplay[NMAG ELT !ETH !SUP DEF<550 uar]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]//Sacred Armor
+//ItemDisplay[NMAG ELT EQ2 xtp]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]
+//ItemDisplay[NMAG !ETH !SUP DEF<450 (uui OR uea OR ula OR utu)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //Dusk Shroud, Wyrmhide, Scarab Husk, and Wire Fleece
+//ItemDisplay[NMAG !ETH !SUP DEF<475 (ung OR ucl OR urs OR uhn)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //Diamond Mail, Loricated Mail, Great Hauberk, and Boneweave
+//ItemDisplay[NMAG !ETH !SUP DEF<500 (upl OR utp OR uld OR ult)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //Balrog Skin, Archon Plate, Kraken Shell, and Hellforge Plate
+//ItemDisplay[NMAG !ETH !SUP DEF<525 (uth OR uul)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //Lacquered Plate and Shadow Plate
+//ItemDisplay[NMAG ELT !ETH !SUP DEF<550 uar]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //Sacred Armor
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // This is where magic and non-magical throwing weapons are ignored either based on character level
 // or outright based on the space they take up. Amazon javelins are always shown.
@@ -562,14 +560,14 @@ ItemDisplay[NMAG !ELT WP13 !(SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR 
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
 // Use the rule below to change the color of the base name of ethereal non-magical items. Default
 // color for this rule if used is to set it to %RED%.
-ItemDisplay[NMAG ETH]: %RED%%NAME%%CONTINUE%
+//ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
 ItemDisplay[NMAG !ETH]: %GRAY%%NAME%%CONTINUE%
 ItemDisplay[MAG]: %BLUE%%NAME%%CONTINUE%
 ItemDisplay[RARE]: %YELLOW%%NAME%%CONTINUE%
 ItemDisplay[SET]: %GREEN%%NAME%%CONTINUE%
 ItemDisplay[UNI]: %TAN%%NAME%%CONTINUE%
 ItemDisplay[!(NMAG OR MAG OR RARE OR SET OR UNI)]: %ORANGE%%NAME%%CONTINUE%
-ItemDisplay[ETH]: %GRAY%Eth %NAME%%CONTINUE%
+ItemDisplay[ETH]: %GREEN%ETH %GRAY%%NAME%%CONTINUE%
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║                  ▬▬▬▬▬ Sockets for Everything Except Non-Magical Items ▬▬▬▬▬                  ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -633,6 +631,8 @@ ItemDisplay[ci3 UNI !ID !ETH]: %RED%###%WHITE%###%BLUE%### %TAN%Griffon's Eye %O
 ItemDisplay[ci3 UNI !ID ETH]: %GRAY%ETH %TAN%Griffon's Eye %ORANGE%[20lr 15litdmg]
 ItemDisplay[ci2 UNI !ID !ETH]: %TAN%Kira's Guardian %ORANGE%[3os 70res]
 ItemDisplay[ci2 UNI !ID ETH]: %GRAY%ETH %TAN%Kira's Guardian %ORANGE%[70res]
+
+
 
 //EQ2 - Body Armor
 ItemDisplay[EQ2 UNI !ID !(xea OR xrs OR xhn OR xpl OR xlt OR ELT) CLVL>79]:
@@ -864,21 +864,21 @@ ItemDisplay[hbt UNI !ID ETH]: %GRAY%ETH %TAN%Tearhaunch
 //Exceptional Unique Boots
 ItemDisplay[xlb UNI !ID !ETH]: %TAN%Infernostride %ORANGE%[150ed 70gold]
 ItemDisplay[xlb UNI !ID ETH]: %GRAY%ETH %TAN%Infernostride %ORANGE%[150ed 70gold]
-ItemDisplay[xvb UNI !ID !ETH]: %RED%## %TAN%Waterwalk %ORANGE%[210ed 65life] %RED%##
+ItemDisplay[xvb UNI !ID !ETH]: %RED%##%WHITE%##%BLUE%## TAN%Waterwalk %ORANGE%[210ed 65life] %BLUE%##%WHITE%##%RED%##
 ItemDisplay[xvb UNI !ID ETH]: %GRAY%ETH %TAN%Waterwalk %ORANGE%[210ed 65life]
-ItemDisplay[xmb UNI !ID !ETH]: %RED%### %TAN%Silkweave %ORANGE%[190ed] %RED%###
+ItemDisplay[xmb UNI !ID !ETH]: %RED%#%WHITE%#%BLUE%# %TAN%Silkweave %ORANGE%[190ed] %BLUE%#%WHITE%#%RED%#
 ItemDisplay[xmb UNI !ID ETH]: %GRAY%ETH %TAN%Silkweave %ORANGE%[190ed]
-ItemDisplay[xtb UNI !ID !ETH]: %RED%#### %TAN%War Traveler %ORANGE%[190ed 10dmg 50mf] %RED%####
+ItemDisplay[xtb UNI !ID !ETH]: %RED%##%WHITE%##%BLUE%## %TAN%War Traveler %ORANGE%[190ed 10dmg 50mf] %BLUE%##%WHITE%##%RED%##
 ItemDisplay[xtb UNI !ID ETH]: %GRAY%ETH %TAN%War Traveler %ORANGE%[190ed 10dmg 50mf]
-ItemDisplay[xhb UNI !ID !ETH]: %RED%#### %TAN%Gore Rider %ORANGE%[200ed] %RED%####
+ItemDisplay[xhb UNI !ID !ETH]: %RED%##%WHITE%##%BLUE%## %TAN%Gore Rider %ORANGE%[200ed] %BLUE%##%WHITE%##%RED%##
 ItemDisplay[xhb UNI !ID ETH]: %GRAY%ETH %TAN%Gore Rider %ORANGE%[200ed]
 
 //Elite Unique Boots
-ItemDisplay[uvb UNI !ID !ETH]: %RED%### %TAN%Sandstorm Trek %ORANGE%[170ed 15str 15 vit] %RED%###
+ItemDisplay[uvb UNI !ID !ETH]: %TAN%Sandstorm Trek %ORANGE%[170ed 15str 15 vit]
 ItemDisplay[uvb UNI !ID ETH]: %GRAY%ETH %TAN%Sandstorm Trek %ORANGE%[170ed 15str 15 vit]
-ItemDisplay[umb UNI !ID !ETH]: %RED%## %TAN%Marrowwalk %ORANGE%[200ed 2skel 20str] %RED%##
+ItemDisplay[umb UNI !ID !ETH]: TAN%Marrowwalk %ORANGE%[200ed 2skel 20str]
 ItemDisplay[umb UNI !ID ETH]: %GRAY%ETH %TAN%Marrowwalk %ORANGE%[200ed 2skel 20str]
-ItemDisplay[uhb UNI !ID !ETH]: %RED%### %TAN%Shadow Dancer %ORANGE%[100ed 2shad 25dex] %RED%###
+ItemDisplay[uhb UNI !ID !ETH]: %TAN%Shadow Dancer %ORANGE%[100ed 2shad 25dex]
 ItemDisplay[uhb UNI !ID ETH]: %GRAY%ETH %TAN%Shadow Dancer %ORANGE%[100ed 2shad 25dex]
 
 
@@ -1430,57 +1430,6 @@ ItemDisplay[SET !ID amu]: %RED%###%WHITE%###%BLUE%### %GREEN%Set Amulet %BLUE%##
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║                 ▬▬▬▬▬ [Optional] Rules for Ignoring Specific Set Pieces ▬▬▬▬▬                 ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-ItemDisplay[SET !ID rin]: //Ignore Angelic Halo and Cathan's Seal
-ItemDisplay[SET !ID rng]: //Ignore Angelic Mantle
-ItemDisplay[SET !ID sbr]: //Ignore Angelic Sickle
-ItemDisplay[SET !ID wst]: //Ignore Arcanna's Deathwand
-ItemDisplay[SET !ID ltp]: //Ignore Arcanna's Flesh
-ItemDisplay[SET !ID skp]: //Ignore Arcanna's Head
-ItemDisplay[SET !ID vbl]: //Ignore Arctic Binding
-ItemDisplay[SET !ID qui]: //Ignore Arctic Furs
-ItemDisplay[SET !ID swb]: //Ignore Arctic Horn
-ItemDisplay[SET !ID tgl]: //Ignore Arctic Mitts and Iratha's Cuff
-ItemDisplay[SET !ID 2ax]: //Ignore Berserker's Hatchet
-ItemDisplay[SET !ID spl]: //Ignore Berserker's Hauberk
-ItemDisplay[SET !ID hlm]: //Ignore Berserker's Headgear
-ItemDisplay[SET !ID chn]: //Ignore Cathan's Mesh
-ItemDisplay[SET !ID bst]: //Ignore Cathan's Rule
-ItemDisplay[SET !ID msk]: //Ignore Cathan's Visage
-ItemDisplay[SET !ID gsc]: //Ignore Civerb's Cudgel
-ItemDisplay[SET !ID lrg]: //Ignore Civerb's Ward
-ItemDisplay[SET !ID sml]: //Ignore Cleglaw's Claw
-ItemDisplay[SET !ID mgl]: //Ignore Cleglaw's Pincers
-ItemDisplay[SET !ID lsd]: //Ignore Cleglaw's Tooth
-ItemDisplay[SET !ID lbl]: //Ignore Death's Guard
-ItemDisplay[SET !ID lgl]: //Ignore Death's Hand
-ItemDisplay[SET !ID wsd]: //Ignore Death's Touch
-ItemDisplay[SET !ID buc]: //Ignore Hsarus' Iron Fist
-ItemDisplay[SET !ID mbt]: //Ignore Hsarus' Iron Heel
-ItemDisplay[SET !ID mbl]: //Ignore Hsarus' Iron Stay and Hwanin's Blessing
-ItemDisplay[SET !ID cap]: //Ignore Infernal Cranium and Sander's Paragon
-ItemDisplay[SET !ID tbl]: //Ignore Infernal Sign and Iratha's Cord
-ItemDisplay[SET !ID gwn]: //Ignore Infernal Torch
-ItemDisplay[SET !ID crn]: //Ignore Iratha's Coil and Milabrega's Diadem
-ItemDisplay[SET !ID brs]: //Ignore Isenhart's Case
-ItemDisplay[SET !ID fhl]: //Ignore Isenhart's Horns
-ItemDisplay[SET !ID bsd]: //Ignore Isenhart's Lightbrand
-ItemDisplay[SET !ID gts]: //Ignore Isenhart's Parry
-ItemDisplay[SET !ID kit]: //Ignore Milabrega's Orb
-ItemDisplay[SET !ID aar]: //Ignore Milabrega's Robe
-ItemDisplay[SET !ID wsp]: //Ignore Milabrega's Rod
-//ItemDisplay[SET !ID hgl]: //Ignore Sigon's Gage
-//ItemDisplay[SET !ID tow]: //Ignore Sigon's Guard
-//ItemDisplay[SET !ID hbt]: //Ignore Sigon's Sabot
-//ItemDisplay[SET !ID gth]: //Ignore Sigon's Shelter
-//ItemDisplay[SET !ID ghm]: //Ignore Sigon's Visor
-//ItemDisplay[SET !ID hbl]: //Ignore Sigon's Wrap
-ItemDisplay[SET !ID mpi]: //Ignore Tancred's Crowbill
-ItemDisplay[SET !ID lbt]: //Ignore Tancred's Hobnails
-ItemDisplay[SET !ID bhm]: //Ignore Tancred's Skull
-ItemDisplay[SET !ID ful]: //Ignore Tancred's Spine
-ItemDisplay[SET !ID lea]: //Ignore Vidala's Ambush
-ItemDisplay[SET !ID lbb]: //Ignore Vidala's Barb
-ItemDisplay[SET !ID tbt]: //Ignore Vidala's Fetlock
 //Aldur's Watchtower (Druid)
 ItemDisplay[SET !ID (9mt OR uul OR dr8) CLVL>70]:
 ItemDisplay[SET !ID xtb]: %GREEN%Aldur's Boots
@@ -1768,7 +1717,7 @@ ItemDisplay[MAG cm3 ILVL>90]: %GREEN%%NAME% %WHITE%[%GRAY%Lv.%ILVL%%WHITE%]
 ItemDisplay[!NMAG !ID !((WP5 AND !CL7) or amu or rin)]: %NAME% %WHITE%
 ItemDisplay[!MAG !ID]: %NAME% %WHITE%
 ItemDisplay[!(NMAG OR MAG OR RARE) ID]: %NAME% %WHITE%
-ItemDisplay[MAG ID amu ALLSK>0]: %NAME% %WHITE%
+ItemDisplay[MAG ID amu ALLSK>0]: %NAME% %WHITE%[%GRAY%Lv.%ILVL%%WHITE%]
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║                           ▬▬▬▬▬ Noteable Magical/Rare Equips ▬▬▬▬▬                            ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -1963,11 +1912,15 @@ ItemDisplay[!ETH ELT WP5 !CL7]: %NAME% %WHITE%[%PRICE% %GOLD%G%WHITE%]
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║               ▬▬▬▬▬ [Custom] Rules for Runeword Bases with No Skill Tags ▬▬▬▬▬                ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-ItemDisplay[NMAG (hbw or cbw) !ETH SOCK=4]: %GRAY%Low Req Harmony Base //Hunter or Composite Bow Harmony Base
+ItemDisplay[NMAG hbw cbw !ETH SOCK=4]: %GRAY%Low Req Harmony Base //Hunter or Composite Bow Harmony Base
 ItemDisplay[ETH (SOCK=0 OR SOCK=6) 7p7]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //0 or 6 socket Eth War Pike
 ItemDisplay[ETH (SOCK=0 OR SOCK=6) 7gm]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //0 or 6 socket Eth Thunder Maul
 
 ItemDisplay[CLVL<70 SOCK=4 !ETH (crs OR bsd) ILVL>40]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //4os Crystal/Broad
+
+//Show Elite and Mage Plate Body Armors
+ItemDisplay[NMAG SOCK>2 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR upl OR utp OR uld OR uld OR ult OR uth OR uul OR uar OR xtp)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]
+ItemDisplay[NMAG SOCK<3 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR upl OR utp OR uld OR uld OR ult OR uth OR uul OR uar OR xtp)]:
 
 
 //║                         ▬▬▬▬▬ Runeword Bases with No Skill Tags ▬▬▬▬▬                         ║
@@ -1987,9 +1940,6 @@ ItemDisplay[CLVL<70 SOCK=4 !ETH (crs OR bsd) ILVL>40]: %NAME% %WHITE%[%GRAY%%SOC
 //ItemDisplay[!ETH SUP ED=15 SOCK=0 (ci2 OR ci3) ILVL>40]: %NAME% %BLUE%[%WHITE%0%YELLOW%»3%BLUE%]%WHITE%
 //ItemDisplay[!ETH SUP ED=15 SOCK=0 (7mp OR 7wa OR 7cr) ILVL>40]: %NAME% %BLUE%[%WHITE%0%YELLOW%»6%BLUE%]%WHITE%
 //ItemDisplay[!ETH SUP ED>0 SOCK=0 (ush OR xrn OR urn OR usk OR uh9) ILVL>40]:
-//ItemDisplay[ETH SOCK=0 (uui OR uea OR ula OR utu) DEF>674 ILVL>25]:
-//ItemDisplay[ETH SOCK=0 (ung OR urs OR uhn) DEF>711 ILVL>25]:
-//ItemDisplay[ETH SOCK=0 (upl OR utp OR uld) DEF>749 ILVL>25]:
 //ItemDisplay[!ETH SOCK=0 uit ILVL>40]:
 //ItemDisplay[!SUP ((am6 OR am7 OR amb OR amc) AND TABSK0>2) ILVL>40 SOCK=0]:
 //ItemDisplay[!ETH pab RES>44 ILVL>25 SOCK=0]: %NAME% %BLUE%[%WHITE%0%YELLOW%»4%BLUE%]%WHITE%
