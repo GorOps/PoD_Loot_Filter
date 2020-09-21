@@ -332,13 +332,13 @@ ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) CL1]:
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) CL4]:
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-// Paladin Shields - Ignore All Pally Shields except Sacred Targe (pab)
+// Paladin Shields - Ignore All Pally Shields except Sacred Targe (pab) and Vortex Shield (paf)
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 ItemDisplay[(NMAG OR (RARE AND !ID)) (pa1 OR pa6)]: //Ignore Targe, Akaran Targe
 ItemDisplay[(NMAG OR (RARE AND !ID)) (pa2 OR pa7 OR pac)]: //Ignore Rondache, Akaran Rondache, and Sacred Rondache
 ItemDisplay[(NMAG OR (RARE AND !ID)) (pa3 OR pa8 OR pad)]: //Ignore Heraldic Shield, Protector Shield, and Kurast Shield
 ItemDisplay[(NMAG OR (RARE AND !ID)) (pa4 OR pa9 OR pae)]: //Ignore Aerin Shield, Gilded Shield, and Zakarum Shield
-ItemDisplay[(NMAG OR (RARE AND !ID)) (pa5 OR paa OR paf)]: //Ignore Crown Shield, Royal Shield, and Vortex Shield
+ItemDisplay[(NMAG OR (RARE AND !ID)) (pa5 OR paa)]: //Ignore Crown Shield, Royal Shield
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Gloves
 //─────────────────────────────────────────────────────────────────────────────────────────────────
@@ -1922,6 +1922,7 @@ ItemDisplay[CLVL<70 SOCK=4 !ETH (crs OR bsd) ILVL>40]: %NAME% %WHITE%[%GRAY%%SOC
 ItemDisplay[NMAG SOCK>2 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR upl OR utp OR uld OR uld OR ult OR uth OR uul OR uar OR xtp)]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%]
 ItemDisplay[NMAG SOCK<3 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR upl OR utp OR uld OR uld OR ult OR uth OR uul OR uar OR xtp)]:
 
+ItemDisplay[NMAG SOCK>2 (pab OR paf) RES>39]: %NAME% %WHITE%[%GRAY%%SOCKETS%%WHITE%] //3-4 Socket Sacred Targe and Vortex Shields
 
 //║                         ▬▬▬▬▬ Runeword Bases with No Skill Tags ▬▬▬▬▬                         ║
 //─────────────────────────────────────────────────────────────────────────────────────────────────
