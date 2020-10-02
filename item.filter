@@ -129,7 +129,7 @@ ItemDisplay[maz]: %NAME% //Infernal Trial
 // Map Relics
 ItemDisplay[ma1 !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## //Icy Cavern or Pleasant Pastures
 ItemDisplay[ma2 !ID]: %RED%###### %TAN%%NAME% T4 %RED%###### //Forgotten Desert
-ItemDisplay[ma4 !ID]: %YELLOW%#### TAN%%NAME% T2 %YELLOW%#### //Desecrated Temple
+ItemDisplay[ma4 !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### //Desecrated Temple
 ItemDisplay[ma5 !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## //Frigid Plateau
 ItemDisplay[ma6 !ID]: %RED%#### %TAN%%NAME% T3 %RED%####  //Ruined Citadel
 ItemDisplay[ma7 !ID]: %RED%###### %TAN%%NAME% T5 %RED%###### //Burnt Forest
