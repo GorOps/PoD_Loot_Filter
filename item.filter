@@ -127,15 +127,15 @@ ItemDisplay[cx7]: %NAME% //Key of Chaos
 ItemDisplay[maz]: %NAME% //Infernal Trial
 
 // Map Relics
-ItemDisplay[ma1 !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## //Icy Cavern or Pleasant Pastures
-ItemDisplay[ma2 !ID]: %RED%###### %TAN%%NAME% T4 %RED%###### //Forgotten Desert
-ItemDisplay[ma4 !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### //Desecrated Temple
-ItemDisplay[ma5 !ID]: %WHITE%## %TAN%%NAME% T1 %WHITE%## //Frigid Plateau
-ItemDisplay[ma6 !ID]: %RED%#### %TAN%%NAME% T3 %RED%####  //Ruined Citadel
-ItemDisplay[ma7 !ID]: %RED%###### %TAN%%NAME% T5 %RED%###### //Burnt Forest
-ItemDisplay[ma8 !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### //Musty Crypt
-ItemDisplay[ma9 !ID]: %YELLOW%#### %TAN%%NAME% T2 %YELLOW%#### //Dim Cellar
-ItemDisplay[ma3 OR ma10 OR maz !ID]: %TAN%%NAME% %RED%Catch1
+ItemDisplay[ma1 !ID]: %WHITE%## %RED%%NAME% T1 %WHITE%## //Icy Cavern or Pleasant Pastures
+ItemDisplay[ma2 !ID]: %RED%###### %RED%%NAME% T4 %RED%###### //Forgotten Desert
+ItemDisplay[ma4 !ID]: %YELLOW%#### %RED%%NAME% T2 %YELLOW%#### //Desecrated Temple
+ItemDisplay[ma5 !ID]: %WHITE%## %RED%%NAME% T1 %WHITE%## //Frigid Plateau
+ItemDisplay[ma6 !ID]: %RED%#### %RED%%NAME% T3 %RED%####  //Ruined Citadel
+ItemDisplay[ma7 !ID]: %RED%###### %RED%%NAME% T5 %RED%###### //Burnt Forest
+ItemDisplay[ma8 !ID]: %YELLOW%#### %RED%%NAME% T2 %YELLOW%#### //Musty Crypt
+ItemDisplay[ma9 !ID]: %YELLOW%#### %RED%%NAME% T2 %YELLOW%#### //Dim Cellar
+ItemDisplay[ma3 OR ma10 OR maz !ID]: %RED%%NAME% %RED%Catch1
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 //║                             ▬▬▬▬▬ Catch-All for Misc Items ▬▬▬▬▬                              ║
 ItemDisplay[!(WEAPON OR ARMOR OR aq2 OR cq2 OR cm1 OR cm2 OR cm3 OR rin OR amu OR jew)]: %NAME%
@@ -336,7 +336,7 @@ ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) EQ6 NORM !hbl]:
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║    ▬▬▬▬▬ [Optional] Inferior Equipment Exclusions for Immediately Ignored Equipment ▬▬▬▬▬     ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-ItemDisplay[INF ci3]: %RED%Diadem%WHITE%
+ItemDisplay[ci3]: %RED%Diadem%WHITE%
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║      ▬▬▬▬▬ Common Runeword Base Exclusions for Immediately Ignored Equipment ▬▬▬▬▬            ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -373,41 +373,7 @@ ItemDisplay[MAG !ID !ETH EQ7]: %BLUE%%NAME%%WHITE%
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║                       ▬▬▬▬▬ Unidentified Crafting Base Exclusions ▬▬▬▬▬                       ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
-// Matched rules will add a tag for the rune required by the recipe in a color matching the p.gem
-// used by the recipe. Rings and Amulets will not have this tag, instead they will have orange
-// brackets around the item level when the item level is 71+ for rings or in the case of amulets,
-// when the item and character levels are in the right proportion to attempt to craft a +2 class
-// skills amulet.
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-// Blood Bases - Hide
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[MAG !ID ETH (vgl OR xvg OR uvg) ILVL>70]: //Blood Gloves (Nef)
-ItemDisplay[MAG !ID !ETH (vgl OR xvg OR uvg) ILVL>70]: //Blood Gloves (Nef)
-ItemDisplay[MAG !ID ETH (tbt OR xtb OR utb) ILVL>70]: //Blood Boots (Eth)
-ItemDisplay[MAG !ID !ETH (tbt OR xtb OR utb) ILVL>70]: //Blood Boots (Eth)
-ItemDisplay[MAG !ID ETH (zmb OR umc) ILVL>70]: //Blood Belt (Tal)
-ItemDisplay[MAG !ID !ETH (zmb OR umc) ILVL>70]: //Blood Belt (Tal)
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-// Caster Bases
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[MAG !ID ETH (lgl OR xlg OR ulg) ILVL>70]: //Caster Gloves (Ort)
-ItemDisplay[MAG !ID !ETH (lgl OR xlg OR ulg) ILVL>70]: //Caster Gloves (Ort)
-ItemDisplay[MAG !ID ETH (lbt OR xlb OR ulb) ILVL>70]: //Caster Boots (Thul)
-ItemDisplay[MAG !ID !ETH (lbt OR xlb OR ulb) ILVL>70]: //Caster Boots (Thul)
-ItemDisplay[MAG !ID ETH (zvb OR uvc) ILVL>70]: //Caster Belt (Ith)
-ItemDisplay[MAG !ID !ETH (zvb OR uvc) ILVL>70]: //Caster Belt (Ith)
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-// Safety Bases
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[MAG !ID ETH uit ILVL>70]: //Safety Monarch (Nef)
-ItemDisplay[MAG !ID !ETH uit ILVL>70]: //Safety Monarch (Nef)
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-// Craftable Rings
-//─────────────────────────────────────────────────────────────────────────────────────────────────
-ItemDisplay[MAG !ID rin ILVL>70]:
-//─────────────────────────────────────────────────────────────────────────────────────────────────
 // Craftable Amulets
-//─────────────────────────────────────────────────────────────────────────────────────────────────
 ItemDisplay[MAG !ID amu ILVL>89]: %NAME% %WHITE%[%GRAY%Lv.%ILVL%%WHITE%]%WHITE%
 ItemDisplay[MAG !ID amu ILVL<90]: //Hide any
 
@@ -532,14 +498,16 @@ ItemDisplay[NMAG !ELT WP13 !(SK96>0 OR SK97>0 OR SK98>0 OR SK99>0 OR SK100>0 OR 
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
 // Use the rule below to change the color of the base name of ethereal non-magical items. Default
 // color for this rule if used is to set it to %RED%.
-//ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
-ItemDisplay[NMAG !ETH]: %GRAY%%NAME%%CONTINUE%
+//ItemDisplay[NMAG ETH]: %RED%ETH %DGREEN%%NAME%%CONTINUE%
+ItemDisplay[NMAG !ETH]: %DGREEN%%NAME%%CONTINUE%
 ItemDisplay[MAG]: %BLUE%%NAME%%CONTINUE%
 ItemDisplay[RARE]: %YELLOW%%NAME%%CONTINUE%
 ItemDisplay[SET]: %GREEN%%NAME%%CONTINUE%
 ItemDisplay[UNI]: %TAN%%NAME%%CONTINUE%
 ItemDisplay[!(NMAG OR MAG OR RARE OR SET OR UNI)]: %ORANGE%%NAME%%CONTINUE%
-ItemDisplay[ETH]: %GREEN%ETH %GRAY%%NAME%%CONTINUE%
+ItemDisplay[ETH !NMAG]: %GREEN%ETH %GRAY%%NAME%%CONTINUE%
+ItemDisplay[NMAG ETH]: %RED%ETH %DGREEN%%NAME%%CONTINUE%
+
 //╔═══════════════════════════════════════════════════════════════════════════════════════════════╗
 //║                  ▬▬▬▬▬ Sockets for Everything Except Non-Magical Items ▬▬▬▬▬                  ║
 //╚═══════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -836,7 +804,7 @@ ItemDisplay[hbt UNI !ID ETH]: %GRAY%ETH %TAN%Tearhaunch
 //Exceptional Unique Boots
 ItemDisplay[xlb UNI !ID !ETH]: %TAN%Infernostride %ORANGE%[150ed 70gold]
 ItemDisplay[xlb UNI !ID ETH]: %GRAY%ETH %TAN%Infernostride %ORANGE%[150ed 70gold]
-ItemDisplay[xvb UNI !ID !ETH]: %RED%##%WHITE%##%BLUE%## TAN%Waterwalk %ORANGE%[210ed 65life] %BLUE%##%WHITE%##%RED%##
+ItemDisplay[xvb UNI !ID !ETH]: %RED%##%WHITE%##%BLUE%## %TAN%Waterwalk %ORANGE%[210ed 65life] %BLUE%##%WHITE%##%RED%##
 ItemDisplay[xvb UNI !ID ETH]: %GRAY%ETH %TAN%Waterwalk %ORANGE%[210ed 65life]
 ItemDisplay[xmb UNI !ID !ETH]: %RED%#%WHITE%#%BLUE%# %TAN%Silkweave %ORANGE%[190ed] %BLUE%#%WHITE%#%RED%#
 ItemDisplay[xmb UNI !ID ETH]: %GRAY%ETH %TAN%Silkweave %ORANGE%[190ed]
@@ -848,7 +816,7 @@ ItemDisplay[xhb UNI !ID ETH]: %GRAY%ETH %TAN%Gore Rider %ORANGE%[200ed]
 //Elite Unique Boots
 ItemDisplay[uvb UNI !ID !ETH]: %TAN%Sandstorm Trek %ORANGE%[170ed 15str 15 vit]
 ItemDisplay[uvb UNI !ID ETH]: %GRAY%ETH %TAN%Sandstorm Trek %ORANGE%[170ed 15str 15 vit]
-ItemDisplay[umb UNI !ID !ETH]: TAN%Marrowwalk %ORANGE%[200ed 2skel 20str]
+ItemDisplay[umb UNI !ID !ETH]: %TAN%Marrowwalk %ORANGE%[200ed 2skel 20str]
 ItemDisplay[umb UNI !ID ETH]: %GRAY%ETH %TAN%Marrowwalk %ORANGE%[200ed 2skel 20str]
 ItemDisplay[uhb UNI !ID !ETH]: %TAN%Shadow Dancer %ORANGE%[100ed 2shad 25dex]
 ItemDisplay[uhb UNI !ID ETH]: %GRAY%ETH %TAN%Shadow Dancer %ORANGE%[100ed 2shad 25dex]
@@ -1821,13 +1789,16 @@ ItemDisplay[NMAG (hbw OR cbw) !ETH SOCK=4]: %GRAY%Low Req Harmony Base //Hunter 
 ItemDisplay[ETH (SOCK=0 OR SOCK=6) 7p7]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //0 or 6 socket Eth War Pike
 ItemDisplay[ETH (SOCK=0 OR SOCK=6) 7gm]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //0 or 6 socket Eth Thunder Maul
 
+// Polearms - Thresher (7s8), Giant Thresher (7wc), Cryptic Axe (7pa), and Great Poleaxe (7h7); Mancatcher (7br) and War Pike (7p7)
+ItemDisplay[NMAG (SOCK=0 OR SOCK=4 OR SOCK=6) ETH (7s8 OR 7wc OR 7pa OR 7h7 OR 7br OR 7p7)]: %RED%#%WHITE%#%BLUE%# %DGREEN%%NAME% %BLUE%#%WHITE%#%RED%#
+
 ItemDisplay[CLVL<70 SOCK=4 !ETH (crs OR bsd) ILVL>40]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //4os Crystal/Broad
 
 //Show Elite and Mage Plate Body Armors
 ItemDisplay[NMAG SOCK>2 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR upl OR utp OR uld OR uld OR ult OR uth OR uul OR uar OR xtp)]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%]
 //ItemDisplay[NMAG SOCK<3 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR upl OR utp OR uld OR uld OR ult OR uth OR uul OR uar OR xtp)]:
 
-temDisplay[NMAG SOCK>2 (pab OR paf) RES>39]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //3-4 Socket Sacred Targe and Vortex Shields
+ItemDisplay[NMAG SOCK>2 (pab OR paf) RES>39]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //3-4 Socket Sacred Targe and Vortex Shields
 ItemDisplay[NMAG (7cr OR 7fb OR 7gs OR 72h OR 7gd) ETH]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //Eth Phase(7cr),ColossusSw(7fb),BalrogBl(7gs),Legend(72h),ColossusBlade(7gd)
 
 //Plague Claw Bases
