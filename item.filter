@@ -244,8 +244,11 @@ ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wst OR 8ws)]: //Ignore War Staff,
 // Wands - Ignore All Wands That Can Not Have 2 Sockets
 ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wnd OR ywn OR 9wn)]:
 //─────────────────────────────────────────────────────────────────────────────────────────────────
-// Scepters
-ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) WP13]: //Ignore All Scepters
+// Scepters - Show All Scepters
+//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) WP13]: //Ignore All Scepters
+//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (scp OR 9sc OR 7sc)]: //Ignore Scepter, Rune Scepter, and Mighty Scepter
+//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (gsc OR 9qs OR 7qs)]: //Ignore Grand Scepter, Holy Water Sprinkler, and Seraph Rod
+//ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (wsp OR 9ws OR 7ws)]: //Ignore War Scepter, Divine Scepter, and Caduceus
 //─────────────────────────────────────────────────────────────────────────────────────────────────
 // Amazon Bows - Ignore All Amazon Bows Except Grand Matron Bow
 ItemDisplay[(NMAG OR ((MAG OR RARE) AND !ID)) (am1 OR am6 OR amb)]: //Ignore Stag Bow, Ashwood Bow, or Matriarchal Bow
@@ -1435,8 +1438,8 @@ ItemDisplay[SET !ID xhg]: %GREEN%Immortal King's Gloves
 ItemDisplay[SET !ID xhb]: %GREEN%Immortal King's Boots
 
 //Infernal Tools
-ItemDisplay[SET !ID (wnd OR cap) CLVL>50]:
-ItemDisplay[SET !ID wnd]: %GREEN%Infernal's Wand
+ItemDisplay[SET !ID (gwn OR cap) CLVL>50]:
+ItemDisplay[SET !ID gwn]: %GREEN%Infernal Torch Wand
 ItemDisplay[SET !ID cap]: %GREEN%Infernal or Sander's Cap
 
 
@@ -1749,8 +1752,12 @@ ItemDisplay[NMAG SOCK>2 (uui OR uea OR ula OR utu OR ung OR ucl OR urs OR uhn OR
 
 //ItemDisplay[NMAG SOCK=3 aar]: %RED%#### %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] %RED%#### //3os Ancient Armor
 
+ItemDisplay[NMAG WP13 SK121>2]: %DGREEN%%NAME% %YELLOW%[+3 FoH] //Pally Scepters with +3 
+ItemDisplay[NMAG WP13 SK112>2]: %DGREEN%%NAME% %YELLOW%[+3 Blessed Hammer]
+ItemDisplay[NMAG WP13 SK113>2]: %DGREEN%%NAME% %YELLOW%[+3 Conc]
+ItemDisplay[NMAG WP13 SK123>2]: %DGREEN%%NAME% %YELLOW%[+3 Conviction]
 
-ItemDisplay[NMAG SOCK>2 (pab OR paf) RES>39]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //3-4 Socket Sacred Targe and Vortex Shields
+ItemDisplay[NMAG (pab OR paf) RES>39]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //Show all Sacred Targe and Vortex Shields with 40+ res
 ItemDisplay[NMAG SOCK>2 (7cr OR 7fb OR 7gs OR 72h OR 7gd) ETH]: %DGREEN%%NAME% %WHITE%[%RED%%SOCKETS%%WHITE%] //Eth Phase(7cr),ColossusSw(7fb),BalrogBl(7gs),Legend(72h),ColossusBlade(7gd)
 
 //Plague Claw Bases
