@@ -1022,7 +1022,7 @@ ItemDisplay[7b8 UNI !ID ETH]: %GRAY%ETH %TAN%Lacerator
 
 
 //WP6 - Javelins
-ItemDisplay[WP5 UNI !ID !7bk CLVL>79]:
+//ItemDisplay[WP5 UNI !ID !7bk CLVL>79]:
 
 //Elite Unique Javelins
 ItemDisplay[7s7 UNI !ID !ETH]: %TAN%Demon's Arch
